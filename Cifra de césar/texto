@@ -1,0 +1,41 @@
+if ( escolha == 1 ) // Criptografia
+    {
+        for ( contador = 0; frase[contador] != '\0'; contador++ )
+        {
+            if ( frase[contador] <= 64 ) // ASCII imprime normal de 32 a 64
+            {
+                printf( "%c", frase[contador] );
+            }
+                
+            else if ( 65 <= frase[contador] <= 90 ) // ASCII imprime alterado com a soma da chave  de 65 a 90
+            {
+                printf( "%c", frase[contador] += chave );
+            }
+
+            else if ( 97 <= frase[contador] <= 122 ) // ASCII imprime alterado com a soma da chave  de 97 a 122
+            {
+                printf( "%c", frase[contador] += chave );
+            }
+        }    
+    }
+
+    else if ( escolha == 2 ) //Descriptografia
+    {
+        for ( contador = 0; frase[contador] != '\0'; contador++ )
+        {
+            if ( frase[contador] <= 64 ) // ASCII imprime normal de 32 a 64
+            {
+                printf( "%c", frase[contador] );
+            }
+            
+            else if ( 65 <= frase[contador] <= 90 ) // ASCII imprime alterado com a subtracão da chave  de 65 a 90
+            {
+                printf( "%c", frase[contador] -= chave );
+            }
+
+            else if ( 97 <= frase[contador] <= 122 ) // ASCII imprime alterado com a subtracão da chave  de 97 a 122
+            {
+                printf( "%c", frase[contador] -= chave );
+            }
+        }        
+    }
